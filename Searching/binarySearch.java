@@ -18,6 +18,21 @@ public class binarySearch {
         }
         return -1;
     }
+
+    // Recursive Binary Search
+    public static int recBinarySearch(int[] arr, int tar, int str, int end){
+        while(str <= end){
+            int mid = str + (end - str)/2;
+            if(arr[mid] < tar){
+                return recBinarySearch(arr, tar, mid+1, end);
+            }else if(arr[mid] > tar){
+                return recBinarySearch(arr, tar, str, mid-1);
+            }else{
+                return mid;
+            }
+        }
+        return -1;
+    }
     public static void main(String[] args) {
         System.out.print("Enter your array size : ");
         Scanner sc = new Scanner(System.in);
@@ -31,6 +46,7 @@ public class binarySearch {
         System.out.print("Enter target element : ");
         int target = sc.nextInt();
         System.out.println(searchNumber(arr, target));
+        System.out.println(recBinarySearch(arr, target, 0, n));
         sc.close();
     }
 }
