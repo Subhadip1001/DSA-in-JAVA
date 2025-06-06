@@ -1,4 +1,4 @@
-package Array;
+package Searching;
 
 // LeetCode: 852
 // Find the peak of a mountain array
