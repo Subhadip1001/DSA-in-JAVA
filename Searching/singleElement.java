@@ -12,7 +12,13 @@ public class singleElement {
         while(str<=end){
             int mid = str+(end-str)/2;
 
+            // edge cases
+            if(mid == 0 && nums[0] != nums[1]) return nums[0];
+            if(mid == n-1 && nums[n-1] != nums[n-2]) return nums[n-1];
+            
+            // Return actual single element
             if(nums[mid-1] != nums[mid] && nums[mid] != nums[mid+1]) return nums[mid];
+            
             // If mid is even
             if(mid%2 == 0){
                 // 
