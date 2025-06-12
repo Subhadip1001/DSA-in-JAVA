@@ -1,5 +1,8 @@
 package Searching;
 
+// GFG: Allocate Minimum Pages
+// Problem Statement: Given an array of integers representing the number of pages in each book, and an integer representing the number of students, allocate books to students such that the maximum number of pages allocated to a student is minimized.
+
 public class bookAllocation {
     public static boolean isValid(int[] books, int n, int m, int maxAllowedPages){
         int students = 1, pages = 0;
